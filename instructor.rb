@@ -1,11 +1,10 @@
-class Instructor
-  attr_accessor :first_name,:last_name,:nickname,:age,:strength
+require "./person"
+class Instructor < Person
+  attr_accessor :nickname,:strength
 
   def initialize(params ={})
-    @first_name = params[:first_name] ? params[:first_name]: "no name"
-    @last_name = params[:last_name] ? params[:last_name]: "no lastname"
+    super
     @nickname = params[:nickname] if params[:nickname]
-    @age = params[:age] ? params[:age]: 1000
     @strength = params[:strength] ? params[:strength]: "be lazy"
   end
 

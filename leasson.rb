@@ -1,3 +1,0 @@
-class Leasson
-
-end
